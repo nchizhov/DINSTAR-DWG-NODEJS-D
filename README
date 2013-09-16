@@ -1,0 +1,44 @@
+* IMPORTANT NOTE *
+
+Overview
+========
+
+This Daemon for VoIP GSM Module - Dinstar DWG 2000: sending and receiveing SMS from/to gateway (written on Node.JS).
+
+How to compile
+==============
+
+- Clone the repo or download the sources.
+
+How to install
+==============
+
+- Edit smsdwg.js 
+  - DWG listening port (dwg_port)
+  - Path for send and receive SMS directories (send_path, income_path)
+  - Path to external program, what shoud be executed when SMS received (run_program)
+  - Path for send and receive USSD (ussd_send_path, ussd_income_path)
+  - On/Off debugging (debug)
+  
+How to use
+==========
+
+- Running: node /path/to/smsdwg.js (Recommending run in screen)
+- Sending SMS format:
+  - First line - phone number
+  - Second line - port
+  - Other lines - message for send
+- Received message as eml format.
+- Sending USSD-command format
+  - First line - port
+  - Second line - USSD-command (ex. *100#)
+- Received message as eml format.
+
+Depends
+=======
+
+- No depends.
+
+ 
+If any doubts arises, please visit my blog http://blog.kgd.in or write me
+an email, I will be answering as soon as I can.
